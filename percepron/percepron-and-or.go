@@ -20,6 +20,8 @@ func main() {
 	//label := []float64{0, 0, 0, 1}
 	// Or gate output
 	label := []float64{0, 1, 1, 1}
+
+	// 10 times for every train
 	p.Train(data, label, 10, rate)
 
 	fmt.Println("\nTrain Done!")
