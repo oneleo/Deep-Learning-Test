@@ -3,6 +3,8 @@ package main
 import (
 	"fmt"
 
+	"math"
+
 	"github.com/oneleo/godl/ann"
 )
 
@@ -33,12 +35,13 @@ func main() {
 	out, _ := m.Dot(m.Transpose([][]float64{{1}, {1}, {1}}), [][]float64{{1}, {2}, {3}})
 	fmt.Println(out)
 
-	b := ann.BP{}
-
-	fmt.Println(b.Node([][]float64{{-999, -999, -999}}, [][]float64{{1, 2, 3}}))
-
-	fmt.Println(b.Node([][]float64{{-999, -999, -999}}, [][]float64{{1, 2, 3}}))
-		fmt.Println(b.Node([][]float64{{999, 999, 999}}, [][]float64{{1, 2, 3}}))
+	//b := ann.BP{}
+	/*
+		fmt.Println(ann.DefaultBP.Node([][]float64{{-999, -999, -999}}, [][]float64{{1, 2, 3}}))
+		fmt.Println(ann.DefaultBP.Node([][]float64{{-999, -999, -999}}, [][]float64{{1, 2, 3}}))
+		fmt.Println(ann.DefaultBP.Node([][]float64{{999, 999, 999}}, [][]float64{{1, 2, 3}}))
+	*/
 	//fmt.Println(b.Node([][]float64{{-999}, {-999}, {-999}}, [][]float64{{1}, {2}, {3}}))
 
+	fmt.Println(math.Sqrt(4))
 }

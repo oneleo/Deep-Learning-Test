@@ -5,7 +5,7 @@ Installation and Usage
 =============
 
     $ git clone
-    $ go run ./percepron-and-or.go
+    $ go run ./percepron/percepron-and-or.go
 
 Inspired By
 =============
