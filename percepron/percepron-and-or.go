@@ -17,9 +17,9 @@ func main() {
 	data := [][]float64{{0, 0}, {0, 1}, {1, 0}, {1, 1}}
 
 	// And gate output
-	//label := []float64{0, 0, 0, 1}
+	label := []float64{0, 0, 0, 1}
 	// Or gate output
-	label := []float64{0, 1, 1, 1}
+	//label := []float64{0, 1, 1, 1}
 
 	// 10 times for every train
 	p.Train(data, label, 10, rate)
@@ -54,6 +54,7 @@ func (self *Perceptron) UpdateWeights(x []float64 /*DataSet*/, l float64, rate f
 
 func (self *Perceptron) Train(d [][]float64 /*DataSet*/, l []float64, time int, rate float64) {
 	for z := 0; z < time; z++ {
+		fmt.Println("Weight: ", self.Weights, "\t", "Bias: ", self.Bias)
 		for i := 0; i < len(d); i++ {
 			t := d[i]
 
@@ -62,6 +63,7 @@ func (self *Perceptron) Train(d [][]float64 /*DataSet*/, l []float64, time int, 
 			self.UpdateWeights(t, l[i], rate, actualOutput)
 			fmt.Println("data: ", t, "\t", "actualOutput: ", actualOutput)
 		}
+		fmt.Println()
 	}
 }
 
